@@ -72,4 +72,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    /**
+     * Cleanup code 08-02-2017
+     */
 }
