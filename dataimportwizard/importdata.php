@@ -1,7 +1,7 @@
 <?php
 //load the database configuration file
 include 'dbConfig.php';
-
+set_time_limit(2000);
 if(isset($_POST['importSubmit'])){
 
     //validate whether uploaded file is a csv file
