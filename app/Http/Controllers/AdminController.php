@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Book;
+
 class AdminController extends Controller
 {
     /**
@@ -26,6 +28,16 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function allbooks()
+    {
+
+        return view ( 'admin.allbooks', [
+            'books' => Book::orderBy ( 'title', 'asc' )->get (),
+        ]);
+
+
+
+    }
     public function bookadd()
     {
         return view('admin.bookadd');

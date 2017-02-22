@@ -32,6 +32,8 @@ Route::resource ( 'allstudents', 'AdminController@allstudents');
 Route::resource ( 'approvestudents', 'AdminController@approvestudents');
 Route::resource ( 'returnbooks', 'AdminController@returnbooks');
 Route::resource ( 'issuedbooks', 'AdminController@issuedbooks');
+Route::resource ( 'allbooks', 'AdminController@allbooks');
+
 
 
 Auth::routes();

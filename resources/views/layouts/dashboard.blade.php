@@ -32,8 +32,8 @@
                         <li {{ (Request::is('admin') ? 'class=active' : '') }}>
                             <a href="{{ url ('admin') }}"><i class="fa fa-home fa-fw"></i> Startpagina</a>
                         </li>
-                        <li {{ (Request::is('bookadd') ? 'class=active' : '') }}>
-                            <a href="{{ url ('bookadd') }}"><i class="fa fa-book fa-fw"></i> Boeken toevoegen</a>
+                        <li {{ (Request::is('allbooks') ? 'class=active' : '') }}>
+                            <a href="{{ url ('allbooks') }}"><i class="fa fa-book fa-fw"></i> Boeken toevoegen</a>
                         </li>
                         <li {{ (Request::is('registerbooks') ? 'class=active' : '') }}>
                             <a href="{{ url ('registerbooks') }}"><i class="fa fa-th-list fa-fw"></i> Alle geregistreerde boeken</a>
