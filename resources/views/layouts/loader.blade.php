@@ -26,7 +26,6 @@
     </div>
   </div>
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
      $('#bookOut').on('show.bs.modal', function(){

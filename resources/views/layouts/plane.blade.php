@@ -19,5 +19,6 @@
 	<script src="{{ asset("assets/scripts/frontend.js") }}" type="text/javascript"></script>
 	<script src="{{ asset("assets/scripts/data.js") }}" type="text/javascript"></script>
 	<script src="{{ asset("assets/scripts/validator.js") }}" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </body>
 </html>
