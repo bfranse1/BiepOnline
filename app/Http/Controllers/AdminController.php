@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Booksissued;
+use Illuminate\Support\Facades\DB;
+
+
 
 class AdminController extends Controller
 {
@@ -48,7 +53,9 @@ class AdminController extends Controller
     }
     public function issuedbooks()
     {
-        return view('admin.issuedbooks');
+        return view('admin.issuedbooks', [
+            'books_issued' => Booksissued::orderBy ( 'id' )->get (),
+        ]);
     }
     /**
      * Store a newly created resource in storage.
