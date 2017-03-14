@@ -26,6 +26,7 @@
     </div>
   </div>
 </div>
+<script src="{{ asset("assets/scripts/jquery.min.js") }}" type="text/javascript"></script>
 <script type="text/javascript">
 $(function(){
      $('#bookOut').on('show.bs.modal', function(){
@@ -36,8 +37,6 @@ $(function(){
         }, 1500));
     });
 });
-</script>
-<script type="text/javascript">
 $(function(){
      $('#bookIn').on('show.bs.modal', function(){
         var bookIn = $(this);
@@ -47,15 +46,11 @@ $(function(){
         }, 1500));
     });
 });
-</script>
-<script type="text/javascript">
 $(function(){
        $('#bookOut').on('shown.bs.modal', function(){
          $('.alert').show()
     });
 });
-</script>
-<script type="text/javascript">
 $(function(){
        $('#bookIn').on('shown.bs.modal', function(){
          $('.alert').show()

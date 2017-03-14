@@ -19,6 +19,5 @@
 	<script src="{{ asset("assets/scripts/frontend.js") }}" type="text/javascript"></script>
 	<script src="{{ asset("assets/scripts/data.js") }}" type="text/javascript"></script>
 	<script src="{{ asset("assets/scripts/validator.js") }}" type="text/javascript"></script>
-	<script src="{{ asset("assets/scripts/jquery.min.js") }}" type="text/javascript"></script>
 </body>
 </html>
