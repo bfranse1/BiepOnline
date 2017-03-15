@@ -1,3 +1,4 @@
+@include('layouts.scripts')
 <div class="modal fade" id="bookOut" tabindex="-1" role="dialog" aria-labelledby="booksout">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -26,7 +27,6 @@
     </div>
   </div>
 </div>
-<script src="{{ asset("assets/scripts/jquery.min.js") }}" type="text/javascript"></script>
 <script type="text/javascript">
 $(function(){
      $('#bookOut').on('show.bs.modal', function(){
