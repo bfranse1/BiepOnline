@@ -1,5 +1,6 @@
 @extends('layouts.dashboard')
 @include('layouts.loader')
+@include('layouts.scripts')
 @section('page_heading','<i class="fa fa-exchange fa-fw"></i> Uitgifte en retour boeken')
 @section('section')
 <div class="alert alert-success  alert-dismissable " role="alert" hidden="hidden">
@@ -39,7 +40,7 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">Boek ID</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" placeholder="Vul hier een boek ID in">
+        <input type="number" class="form-control" data-form-field="book-issue-id" placeholder="Vul hier een boek ID in">
       </div>
     </div>
     <div class="form-group">

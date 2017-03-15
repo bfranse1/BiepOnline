@@ -52,11 +52,12 @@ class AdminController extends Controller
         return view('admin.returnbooks');
     }
     public function issuedbooks()
-    {
-        return view('admin.issuedbooks', [
-            'books_issued' => Booksissued::orderBy ( 'id' )->get (),
-        ]);
-    }
+  	{
+  			return view('admin.issuedbooks', [
+  					'books_issued' => Booksissued::orderBy ( 'id' )->get (),
+  			]);
+  	}
+
     /**
      * Store a newly created resource in storage.
      *

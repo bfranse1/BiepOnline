@@ -30,7 +30,7 @@ Route::resource ( 'bookadd', 'AdminController@bookadd');
 Route::resource ( 'registerbooks', 'AdminController@registerbooks');
 Route::resource ( 'allstudents', 'AdminController@allstudents');
 Route::resource ( 'approvestudents', 'AdminController@approvestudents');
-Route::resource ( 'returnbooks', 'AdminController@returnbooks');
+Route::resource ( 'returnbooks', 'ReturnController');
 Route::resource ( 'issuedbooks', 'AdminController@issuedbooks');
 
 
