@@ -2,52 +2,62 @@
 @section('page_heading','Boeken toevoegen')
 @section('section')
 
-    <a class="btn btn-primary btn-lg btn-block" role="button" href="/bookadd"><i class="fa fa-book"></i> Boek Toevoegen</a>
 
 
 
-    <table class="table table-condensed table-bordered table-striped table-responsive small">
-        <thead>
-        <tr>
-            <th>Alle toegevoegde boeken</th>
-        </tr>
-        </thead>
-        <tbody>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="form-group">
+                <div class="col-sm-offset-0 col-sm-8">
+                    <button type="button" data-toggle="modal" data-target="#bookOut" class="btn btn-primary btn-lg btn-block" href="/bookadd">Boek Toevoegen<i class="fa fa-book"></i> <i class="fa fa-long-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="panel-heading">Toegevoegde boeken</div>
 
-            @if (count($books) > 0)
+            <div class="panel-body">
+
+                <table class="table table-condensed table-bordered table-striped table-responsive small">
+                    <tr>
+                        <th>Titel</th>
+                    </tr>
+                @foreach($books as $book)
+                    <tr>
+                        <td>{{ $book->book_title }}</td>
+                        <td>
+                            Bewerk
+                            |
+                            Verwijder
+                        </td>
+                    </tr>
+                @endforeach
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            {{--@if (count($books) > 0)
                 <table class="table table-condensed table-bordered table-striped table-responsive small">
                     <thead>
-                    <th class="col-sm-1">Id</th>
                     <th class="col-sm-4">ISBN</th>
                     <th class="col-sm-2">Titel</th>
-                    <th class="col-sm-2">Auteur</th>
-                    <th class="col-sm-2">Categorie</th>
                     </thead>
                     <tbody>
                     @foreach ($books as $book)
                         <tr class="row-link" style="cursor: pointer;"
                             data-href="{{action('BookController@show', ['id' => $book->id]) }}">
-                            <td class="table-text">{{ $book->id }}</td>
-                            <td class="table-text">{{ $book->isbn }}</td>
-                            <td class="table-text">{{ $book->title }}</td>
-                            <td class="table-text">
-                                @if (isset($book->author))
-                                    {{ $book->author->name }}
-                                @endif
-                            </td>
-                            <td class="table-text">
-                                @if (isset($book->category))
-                                    {{ $book->category->name }}
+                            <td class="table-text">{{ $book->book_isbn }}</td>
+                            <td class="table-text">{{ $book->book_title }}</td>
 
-                                @endif
-                            </td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
-            @endif
+            @endif--}}
 
-            @section('scripts')
+            {{--@section('scripts')
                 <script>
                     jQuery(document).ready(function($) {
                         $(".row-link").click(function() {
@@ -56,9 +66,8 @@
                         $('#cohort-tabs a:first').tab('show') // Select first tab
                     });
                 </script>
-            @endsection
-        </tbody>
-    </table>
+            @endsection--}}
+
 
 
 

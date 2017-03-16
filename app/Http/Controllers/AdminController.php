@@ -30,10 +30,10 @@ class AdminController extends Controller
      */
     public function allbooks()
     {
-
-        return view ( 'admin.allbooks', [
-            'books' => Book::orderBy ( 'title', 'asc' )->get (),
-        ]);
+        $books = Book::all();
+        return view ( 'admin.allbooks', compact('books') /*[
+           'books' => Book::orderBy ( 'book_title', 'asc' )->get (),
+        ]*/);
 
 
 
